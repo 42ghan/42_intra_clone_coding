@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="short icon" href="images/42_logo_black.png">
   </head>
+
   <body>
     <header class="header">
       <div class="header-logo">
@@ -21,10 +22,16 @@
       <div class="header-user">
         <span class="material-icons-outlined">notifications</span>
         <span class="header-user-dropdown">
-          <a>
+          <button class="header-user-drbtn">
             <span class="user-id">ghan</span>
             <img id="profile-photo" src="images/profile.jpeg">
-          </a>
+          </button>
+          <ul class="user-dropdown-content">
+            <a href="https://profile.intra.42.fr/slots"><li>Manage Slots</li></a>
+            <a href="https://profile.intra.42.fr/users/ghan"><li>View my profile</li></a>
+            <a href="https://profile.intra.42.fr/languages"><li>Settings</li></a>
+            <a href="https://signin.intra.42.fr/users/sign_out"><li>Logout</li></a>
+          </ul>
         </span>
       </div>
     </header>
@@ -70,8 +77,18 @@
     </nav>
 
     <main>
-      <section class="main-section-profile">
-
+      <section class="section-profile">
+        <div class="coalition">
+          <img src="images/gam_flag.png">
+        </div>
+        <div class="profile-info">
+          <div class="name-id"></div>
+          <div class="stats"></div>
+          <div class="info-else">
+            <div class="info-else-inline"></div>
+            <div class="level"></div>
+          </div>
+        </div>
       </section>
 
       <section>

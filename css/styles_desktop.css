@@ -1,7 +1,5 @@
-* {
-  margin: 0;
-  outline: 0;
-}
+/* reset */
+@import "reset.css";
 
 body {
   font-family:Arial, Helvetica, sans-serif;
@@ -59,7 +57,7 @@ body {
 
 .header-search-bar input {
   width: 60%;
-  padding: 22.5px 0;
+  padding: 20px 0;
   border-style: none;
   float: left;
 }
@@ -80,6 +78,7 @@ body {
 
 .header-user-dropdown {
   width: calc(100% - 40px);
+  height: 60px;
   float: left;
 }
 
@@ -97,6 +96,42 @@ body {
   border-radius: 50%;
   padding: 12px;
   float: left;
+}
+
+.header-user-drbtn {
+  float: left;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  z-index: 1;
+}
+
+.user-id:hover {
+  color: #00babb;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  width: 128.75px;
+}
+
+.header-user-dropdown button:focus + .user-dropdown-content,
+.user-dropdown-content:hover {
+  display: block;
+  position: absolute;
+  top: 60px;
+  font-size:16px;
+  text-align:center;
+  z-index: 2;
+}
+
+.user-dropdown-content li {
+  font-size: 12px;
+  text-align: left;
+  line-height: 32px;
+  padding-left: 20px;
 }
 
 /* side nav */
@@ -133,14 +168,21 @@ main {
   height: 100%;
   background: #fafafa;
   position: relative;
-  z-index: 0;
+  z-index: -1;
 }
 
-.main-section-profile {
+main .section-profile {
   height: 314px;
   background: url(../images/gam_background.jpg);
-  background-position: center;
+  background-position: top 100% left 5%;
+  background-size: 150% 150%;
   padding-left: 80px;
+}
+
+.coalition {
+  width: 100px;
+  height: 100%;
+  padding: 0 10px 0 38px;
 }
 
 /* contents */
