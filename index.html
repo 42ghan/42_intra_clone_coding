@@ -5,10 +5,12 @@
     <title>Intra Profile Home</title>
     <link rel="stylesheet" href="css/styles_desktop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="short icon" href="images/42_logo_black.png">
   </head>
 
   <body>
+    <!-- SECTION - HEADER -->
     <header class="header">
       <div class="header-logo">
         <a href="https://profile.intra.42.fr/">
@@ -36,6 +38,8 @@
       </div>
     </header>
 
+
+    <!-- SECTION - SIDE NAV BAR -->
     <nav class="nav">
       <div class="nav-sidebar">
         <li>
@@ -76,18 +80,80 @@
       </div>
     </nav>
 
+
     <main>
+      <!-- SECTION - PROFILE ROW -->
       <section class="section-profile">
         <div class="coalition">
-          <img src="images/gam_flag.png">
-          <span></span>
+          <a href="https://profile.intra.42.fr/blocs/27/coalitions/87/">
+            <img src="images/gam_flag.png" width="100px" height="150px">
+          </a>
+          <table class="coal-score">
+            <tr>
+              <td><i class="material-icons">emoji_events</i><p>4242</p></td>
+            </tr>
+            <tr>
+              <td><i class="material-icons-outlined">keyboard_double_arrow_up</i><p>42</p></td>
+            </tr>
+          </table>
         </div>
         <div class="profile-info">
-          <div class="name-id"></div>
-          <div class="stats"></div>
-          <div class="info-else">
-            <div class="info-else-inline"></div>
-            <div class="level"></div>
+          <div class="info-row1-name-id">   
+            <span>
+              <a alt="gam coalition" href="https://profile.intra.42.fr/blocs/27/coalitions/87">Gam</a>
+            </span>
+            <span>Gyoungmin Han</span>
+            <span>ghan</span>
+            <span>
+              <a href="https://projects.intra.42.fr/projects/graph?login=ghan">
+                <i class="material-icons">public</i>
+              </a>
+              <a href="https://companies.intra.42.fr/users/85315/resumes/5543">
+                <i class="material-icons">work</i>
+              </a>
+              <a href="https://profile.intra.42.fr/users/ghan/edit">
+                <i class="material-icons">edit</i>
+              </a>
+            </span>
+          </div>
+          <div class="info-row2">
+            <div class="stats">
+              <table>
+                <tr>
+                  <td>Wallet</td>
+                  <td>42₩</td>
+                </tr>
+                <tr>
+                  <td>Evaluation points</td>
+                  <td>42</td>
+                </tr>
+                <tr>
+                  <td>Cursus</td>
+                  <td>42cursus</td>
+                </tr>
+                <tr>
+                  <td>Grade</td>
+                  <td>Learner</td>
+                </tr>
+              </table>
+            </div>
+            <div class="info-else">
+              <div class="info-else-inline">
+                <div class="cluster-seat">
+                  <h2>Available</h2>
+                  <p>c8r4s14</p>
+                </div>
+                <div class="blackhole">
+                  <h2>Black Hole absorption</h2>
+                  <p>
+                    <i class="material-icons-outlined">sentiment_satisfied</i>
+                    <i class="material-icons-outlined">all_inclusive</i>
+                    days left
+                  </p>
+                </div>
+              </div>
+              <progress id="level" value="32" max="100"> 32% </progress>
+            </div>
           </div>
         </div>
       </section>
