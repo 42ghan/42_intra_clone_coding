@@ -11,10 +11,10 @@
 
   <body>
     <!-- SECTION - HEADER -->
-    <header class="header">
+    <header>
       <div class="header-logo">
         <a href="https://profile.intra.42.fr/">
-          <img alt="42" src="https://projects.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg">
+          <img alt="42 logo" src="https://projects.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg">
         </a>
       </div>
       <span class="header-search material-icons-outlined">search</span>
@@ -24,8 +24,8 @@
       <div class="header-user">
         <span class="material-icons-outlined">notifications</span>
         <span class="header-user-dropdown">
-          <button class="header-user-drbtn">
-            <span class="user-id">ghan</span>
+          <button id="header-user-drbtn">
+            <span id="user-id">ghan</span>
             <img id="profile-photo" src="images/profile.jpeg">
           </button>
           <ul class="user-dropdown-content">
@@ -40,7 +40,7 @@
 
 
     <!-- SECTION - SIDE NAV BAR -->
-    <nav class="nav">
+    <nav>
       <div class="nav-sidebar">
         <li>
           <a href="https://profile.intra.42.fr/">
@@ -98,13 +98,13 @@
           </table>
         </div>
         <div class="profile-info">
-          <div class="info-row1-name-id">   
+          <div class="info-row1">   
             <span>
               <a alt="gam coalition" href="https://profile.intra.42.fr/blocs/27/coalitions/87">Gam</a>
             </span>
             <span>Gyoungmin Han</span>
             <span>ghan</span>
-            <span>
+            <span class="dark-transparent">
               <a href="https://projects.intra.42.fr/projects/graph?login=ghan">
                 <i class="material-icons">public</i>
               </a>
@@ -117,7 +117,7 @@
             </span>
           </div>
           <div class="info-row2">
-            <div class="stats">
+            <div class="stats dark-transparent">
               <table>
                 <tr>
                   <td>Wallet</td>
@@ -139,12 +139,12 @@
             </div>
             <div class="info-else">
               <div class="info-else-inline">
-                <div class="cluster-seat">
-                  <h2>Available</h2>
+                <div class="cluster-seat dark-transparent">
+                  <p>Available</p>
                   <p>c8r4s14</p>
                 </div>
-                <div class="blackhole">
-                  <h2>Black Hole absorption</h2>
+                <div class="blackhole dark-transparent">
+                  <p>Black Hole absorption</p>
                   <p>
                     <i class="material-icons-outlined">sentiment_satisfied</i>
                     <i class="material-icons-outlined">all_inclusive</i>
@@ -156,7 +156,7 @@
                 <a href="https://profile.intra.42.fr/users/ghan/experiences/cursus_id/21">
                   <span>level 42 - 42%</span>
                 </a>
-                <progress id="level" value="32" max="100"> 32% </progress>
+                <progress value="32" max="100"> 32% </progress>
               </div>
             </div>
           </div>

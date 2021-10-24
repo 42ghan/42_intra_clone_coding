@@ -1,11 +1,11 @@
-/* reset */
+/* SECTION - RESET */
 @import "reset.css";
 
 body {
   font-family: PT Sans;
 }
 
-/* material icons */
+/* SECTION - MATERIAL ICONS */
 
 .material-icons,
 .material-icons-outlined {
@@ -13,11 +13,9 @@ body {
 }
 
 
-/* for desktop */
+/* SECTION - HEADER */
 
-/* header */
-
-.header {
+header {
   width: 100%;
   height: 60px;
   display: flex;
@@ -29,7 +27,6 @@ body {
 
 .header-logo {
   width: 80px;
-  min-width: 80px;
   height: 60px;
   background: #292d38;
 }
@@ -39,11 +36,6 @@ body {
   height: 30px;
   margin: 15px 0 15px 0px;
   vertical-align: middle;
-} 
-
-.header-search-bar {
-  width: calc(100% - 308.75px);
-  padding: 0 5px;
 }
 
 .header-search.material-icons-outlined {
@@ -54,27 +46,26 @@ body {
 }
 
 .header-search-bar {
-  vertical-align: middle;
+  width: calc(100% - 308.75px);
+  padding: 0 5px;
 }
 
 .header-search-bar input {
   width: 60%;
+  float: left;
   padding: 18px 0;
   border-style: none;
-  float: left;
 }
 
 .header-user {
   width: 168.75px;
-  min-width: 168.75px;
-  vertical-align: middle;
   color: #666666;
 }
 
 .header-user .material-icons-outlined {
   float: left;
+  margin: 16px 12px 16px 0;
   font-size: 28px;
-  padding: 16px 12px 16px 0;
   color: #666666;
 }
 
@@ -84,58 +75,53 @@ body {
   float: left;
 }
 
-.user-id {
+#user-id {
+  padding: 21px 10px;
+  float: left;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  padding: 21px 10px;
-  float: left;
+}
+
+#user-id:hover {
+  color: #00babb;
 }
 
 #profile-photo {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  padding: 12px;
   float: left;
+  padding: 12px;
+  border-radius: 50%;
 }
 
-.header-user-drbtn {
+#header-user-drbtn {
   float: left;
   background: transparent;
   cursor: pointer;
   color: inherit;
-  z-index: 1;
-}
-
-.user-id:hover {
-  color: #00babb;
 }
 
 .user-dropdown-content {
-  display: none;
-  position: absolute;
-  background: #ffffff;
   width: 128.75px;
-  z-index: 1;
-  overflow: visible;
+  display: none;
+  background: #ffffff;
 }
 
-.header-user-dropdown button:focus + .user-dropdown-content {
+.header-user-dropdown button:focus
++ .user-dropdown-content {
   display: block;
+  position: absolute;
   top: 60px;
   font-size:16px;
   text-align: center;
-  position: absolute;
 }
 
 .user-dropdown-content li {
-  display: block;
   font-size: 12px;
   text-align: left;
   line-height: 30px;
   padding-left: 20px;
-  z-index: 1;
 }
 
 .user-dropdown-content li:hover {
@@ -146,18 +132,19 @@ body {
   font-weight: bold;
 }
 
-/* side nav */
 
-.nav {
+/* SECTION - SIDE NAV BAR */
+
+nav {
   width: 80px;
   height: 100%;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  background: #292d38;
   position: fixed;
   top: 0;
-  padding-top: 60px;
   z-index: 1;
+  background: #292d38;
+  padding-top: 60px;
 }
 
 .nav-sidebar li {
@@ -168,15 +155,17 @@ body {
   vertical-align: middle;
   padding: auto;
 }
+
 .nav-sidebar li span.material-icons-outlined {
   width: 25px;
   height: 35px;
-  vertical-align: middle;
   padding: 22.5px 27.5px;
   color: #777777;
+  vertical-align: middle;
 }
 
-/* user profile */
+
+/* SECTION - MAIN */
 
 main {
   width: 100%;
@@ -188,29 +177,26 @@ main {
   z-index: 0;
 }
 
-main .section-profile {
+.dark-transparent {
+  background: rgba(32,32,38,0.85);
+}
+
+/* SECTION - USER PROFILE */
+
+.section-profile {
   height: 314px;
   display: flex;
   flex-direction: row;
   background: url(../images/gam_cover.jpeg);
   background-position: top 100% left 5%;
   background-size: 150% 150%;
-  padding-left: 80px;
+  margin-left: 80px;
 }
 
 .coalition {
   width: 100px;
   height: 314px;
   padding: 0 10px 0 38px;
-  margin: 0;
-  z-index: 0;
-}
-
-.coalition a {
-  width: 100px;
-  height: 150px;
-  display: block;
-  padding-bottom: 10px;
 }
 
 .coal-score {
@@ -242,59 +228,55 @@ main .section-profile {
   width: 100%;
   height: 314px;
   margin: 0 36px 0 20px;
-  z-index: 0;
 }
 
-.info-row1-name-id {
+.info-row1 {
   height: 32px;
-  padding: 10px 0;
   position: relative;
+  padding: 10px 0;
+  color: #ffffff;
 }
 
-.info-row1-name-id span:first-of-type {
+.info-row1 span:first-of-type {
   color: #4c83a4;
-  top: 0;
   position: absolute;
   top: 13px;
 }
 
-.info-row1-name-id span:first-of-type a:hover {
+.info-row1 span:first-of-type a:hover {
   text-decoration: underline;
 }
 
-.info-row1-name-id span:nth-of-type(2) {
-  color: #ffffff;
-  font-size: 20px;
+.info-row1 span:nth-of-type(2) {
   position: absolute;
   top: 15px;
   left: 45px;
+  font-size: 20px;
 }
 
-.info-row1-name-id span:nth-of-type(3) {
-  color: #ffffff;
-  font-size: 18px;
+.info-row1 span:nth-of-type(3) {
   position: absolute;
   top: 16px;
   left: 200px;
+  font-size: 18px;
 }
 
-.info-row1-name-id span:last-of-type {
-  height: 30px;
+.info-row1 span:last-of-type {
   width: 130px;
-  background: rgba(32,32,38,0.85);
-  border-radius: 8%;
+  height: 30px;
   float: right;
+  margin-right: 30px;
+  border-radius: 8%;
   text-align: center;
   vertical-align: middle;
-  margin-right: 30px;
 }
 
-.info-row1-name-id span:last-of-type i {
+.info-row1 span:last-of-type i {
   font-size: 20px;
   padding: 3px 5px;
 }
 
-.info-row1-name-id span:last-of-type i:hover {
+.info-row1 span:last-of-type i:hover {
   color: #00babb;
 }
 
@@ -306,16 +288,14 @@ main .section-profile {
 .stats {
   width: 30%;
   height: 250px;
-  background: rgba(32,32,38,0.85);
   border-radius: 2%;
 }
 
 .stats table {
   margin: 64.5px auto;
-  vertical-align: middle;
 }
 
-.stats tr td {
+.stats td {
   font-size: 18px;
   line-height: 32px;
 }
@@ -331,14 +311,14 @@ main .section-profile {
 
 .info-else {
   width: 70%;
-  height: 210px;
+  height: 250px;
 }
 
 .info-else-inline {
   height: 210px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 10px;
+  column-gap: 10px;
   margin-left: 10px;
 }
 
@@ -346,7 +326,6 @@ main .section-profile {
 .blackhole {
   width: 100%;
   height: 200px;
-  background: rgba(32,32,38,0.85);
   text-align: center;
   vertical-align: middle;
   border-radius: 2%;
@@ -357,25 +336,25 @@ main .section-profile {
   vertical-align: middle;
 }
 
-.cluster-seat h2 {
-  margin-top: 60px;
+.cluster-seat p:first-of-type {
+  margin-top: 63px;
   font-size: 36px;
   line-height: 42px;
 }
 
-.cluster-seat p {
+.cluster-seat p:last-of-type {
   font-size: 24px;
   line-height: 32px;
 }
 
-.blackhole h2 {
-  font-size: 16px;
-  color: #4a7d9e;
-  line-height: 24px;
+.blackhole p:first-of-type {
   margin-top: 60px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4a7d9e;
 }
 
-.blackhole p,
+.blackhole p:last-of-type,
 .blackhole i {
   font-size: 28px;
   color: #52d17a;
@@ -395,40 +374,37 @@ main .section-profile {
 
 .level-bar span {
   width: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 4px;
   color: #ffffff;
   font-size: 14px;
   text-align: center;
-  margin-top: 4px;
   line-height: 36px;
-  z-index: 1;
-  position: absolute;
 }
 
-#level {
+.level-bar progress {
   width: 100%;
-  border-radius: 2%;
+  height: 36px;
+  border-radius: 4%;
   z-index: 0;
   position: absolute;
 }
 
-.info-else progress::-webkit-progress-bar {
-  width: 100%;
-  height: 36px;
+.level-bar progress::-webkit-progress-bar {
   margin: 4px 0 0 10px;
-  border-radius: 2%;
+  border-radius: 4%;
   background: rgba(32,32,38,0.85);
 }
 
-.info-else progress::-webkit-progress-value {
-  width: 100%;
-  height: 36px;
-  border-radius: 2%;
+.level-bar progress::-webkit-progress-value {
+  border-radius: 4%;
   background: #4c83a4;
 }
 
-/* contents */
+/* SECTION - CONTENTS */
 
-main .contents {
+.contents {
   height: 100%;
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.4%;
@@ -452,17 +428,17 @@ main .contents {
 }
 
 .contents-buttons {
+  float: right;
   font-family: PT Sans Narrow;
   font-size: 12px;
   color: #58c9ca ;
   text-align: center;
-  float: right;
 }
 
 .contents-buttons span {
   border: 1px solid;
-  padding: 6px 8px;
   margin: 1px;
+  padding: 6px 8px;
 }
 
 .contents-buttons span i {
@@ -472,7 +448,8 @@ main .contents {
   vertical-align: middle;
 }
 
-/* footer */
+
+/* SECTION - FOOTER */
 
 footer {
   display: block;
